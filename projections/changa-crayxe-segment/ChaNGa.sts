@@ -1,0 +1,625 @@
+PROJECTIONS_ID 
+VERSION 7.0
+TOTAL_PHASES 1
+MACHINE gemini_gni-crayxe-hugepages-smp
+PROCESSORS 992
+TOTAL_CHARES 84
+TOTAL_EPS 474
+TOTAL_MSGS 45
+TOTAL_PSEUDOS 0
+TOTAL_EVENTS 10
+CHARE 0 dummy_thread_chare
+CHARE 1 dummy_pack_chare
+CHARE 2 dummy_unpack_chare
+CHARE 3 SDAG
+CHARE 4 null
+CHARE 5 Chare
+CHARE 6 Group
+CHARE 7 FutureBOC
+CHARE 8 FutureMain
+CHARE 9 CkGroupInitCallback
+CHARE 10 CkGroupReadyCallback
+CHARE 11 CkReductionMgr
+CHARE 12 CkNodeReductionMgr
+CHARE 13 CkLocMgr
+CHARE 14 CkArrayMap
+CHARE 15 RRMap
+CHARE 16 DefaultArrayMap
+CHARE 17 FastArrayMap
+CHARE 18 HilbertArrayMap
+CHARE 19 ReadFileMap
+CHARE 20 BlockMap
+CHARE 21 CldMap
+CHARE 22 ConfigurableRRMap
+CHARE 23 PropMap
+CHARE 24 CkMapsInit
+CHARE 25 CkArrayReductionMgr
+CHARE 26 CkArray
+CHARE 27 ArrayElement
+CHARE 28 BaseLB
+CHARE 29 NullLB
+CHARE 30 LBDBInit
+CHARE 31 LBDatabase
+CHARE 32 MetaLBInit
+CHARE 33 MetaBalancer
+CHARE 34 MetaBalancerRedn
+CHARE 35 ckcallback_main
+CHARE 36 ckcallback_group
+CHARE 37 TempoChare
+CHARE 38 TempoGroup
+CHARE 39 TempoArray
+CHARE 40 waitqd_QDChare
+CHARE 41 CkCheckpointMgr
+CHARE 42 CkCheckpointInit
+CHARE 43 Main
+CHARE 44 ProjectionsControl
+CHARE 45 ReductionHelper
+CHARE 46 Sorter
+CHARE 47 DataManager
+CHARE 48 TreePiece
+CHARE 49 LvArray
+CHARE 50 PETreeMerger
+CHARE 51 DumpFrameData
+CHARE 52 IntraNodeLBManager
+CHARE 53 CkCacheManager<CmiUInt8 >
+CHARE 54 CkCacheManager<CmiUInt16 >
+CHARE 55 CkMulticastMgr
+CHARE 56 CentralLB
+CHARE 57 RefineLB
+CHARE 58 RefineCommLB
+CHARE 59 GreedyLB
+CHARE 60 GreedyCommLB
+CHARE 61 OrbLB
+CHARE 62 RotateLB
+CHARE 63 MultistepLB
+CHARE 64 MultistepLB_notopo
+CHARE 65 MultistepNodeLB_notopo
+CHARE 66 MultistepOrbLB
+CHARE 67 Orb3dLB
+CHARE 68 Orb3dLB_notopo
+CHARE 69 HybridBaseLB
+CHARE 70 HierarchOrbLB
+CHARE 71 liveVizPollArray
+CHARE 72 liveVizGroup
+CHARE 73 LiveVizBoundElement
+CHARE 74 FuncCkLoop
+CHARE 75 FuncSingleHelper
+CHARE 76 TraceProjectionsInit
+CHARE 77 KMeansBOC
+CHARE 78 TraceProjectionsBOC
+CHARE 79 Director
+CHARE 80 Manager
+CHARE 81 WriteSession
+CHARE 82 Map
+CHARE 83 ckloop_converse_chare
+ENTRY CHARE 0 dummy_thread_ep 0 0
+ENTRY CHARE 1 dummy_pack_ep 1 1
+ENTRY CHARE 2 dummy_unpack_ep 2 2
+ENTRY CHARE 3 SDAG_RTS 3 3
+ENTRY CHARE 4 null 0 0
+ENTRY CHARE 5 FutureBOC(FutureInitMsg* impl_msg) 7 6
+ENTRY CHARE 6 SetFuture(FutureInitMsg* impl_msg) 7 6
+ENTRY CHARE 7 SetSema(FutureInitMsg* impl_msg) 7 6
+ENTRY CHARE 8 FutureBOC(CkMigrateMessage* impl_msg) 7 0
+ENTRY CHARE 9 FutureMain(CkArgMsg* impl_msg) 8 0
+ENTRY CHARE 10 CkGroupInitCallback(void) 9 0
+ENTRY CHARE 11 callMeBack(CkGroupCallbackMsg* impl_msg) 9 7
+ENTRY CHARE 12 CkGroupInitCallback(CkMigrateMessage* impl_msg) 9 0
+ENTRY CHARE 13 CkGroupReadyCallback(void) 10 0
+ENTRY CHARE 14 callMeBack(CkGroupCallbackMsg* impl_msg) 10 7
+ENTRY CHARE 15 CkGroupReadyCallback(CkMigrateMessage* impl_msg) 10 0
+ENTRY CHARE 16 CkReductionMgr(const CProxy_CkArrayReductionMgr &impl_noname_0) 11 0
+ENTRY CHARE 17 RecvMsg(CkReductionMsg* impl_msg) 11 8
+ENTRY CHARE 18 ReductionStarting(CkReductionNumberMsg* impl_msg) 11 9
+ENTRY CHARE 19 LateMigrantMsg(CkReductionMsg* impl_msg) 11 8
+ENTRY CHARE 20 MigrantDied(CkReductionNumberMsg* impl_msg) 11 9
+ENTRY CHARE 21 Barrier_RecvMsg(CkReductionMsg* impl_msg) 11 8
+ENTRY CHARE 22 ArrayReductionHandler(CkReductionMsg* impl_msg) 11 8
+ENTRY CHARE 23 contributeViaMessage(CkReductionMsg* impl_msg) 11 8
+ENTRY CHARE 24 AddToInactiveList(CkReductionInactiveMsg* impl_msg) 11 10
+ENTRY CHARE 25 CkReductionMgr(CkMigrateMessage* impl_msg) 11 0
+ENTRY CHARE 26 CkNodeReductionMgr(void) 12 0
+ENTRY CHARE 27 ReductionStarting(CkReductionNumberMsg* impl_msg) 12 9
+ENTRY CHARE 28 RecvMsg(CkReductionMsg* impl_msg) 12 8
+ENTRY CHARE 29 restartLocalGroupReductions(int number) 12 0
+ENTRY CHARE 30 DeleteChild(int child) 12 0
+ENTRY CHARE 31 DeleteNewChild(int child) 12 0
+ENTRY CHARE 32 modifyTree(int code, int size, const int *data) 12 0
+ENTRY CHARE 33 collectMaxRedNo(int redNo) 12 0
+ENTRY CHARE 34 unblockNode(int maxRedNo) 12 0
+ENTRY CHARE 35 CkLocMgr(const CkArrayOptions &opts) 13 11
+ENTRY CHARE 36 deliverInline(CkMessage* impl_msg) 13 -1
+ENTRY CHARE 37 immigrate(CkArrayElementMigrateMessage* impl_msg) 13 12
+ENTRY CHARE 38 requestLocation(const CkArrayIndex &idx, int peToTell, const bool &suppressIfHere) 13 11
+ENTRY CHARE 39 updateLocation(const CkArrayIndex &idx, int nowOnPe) 13 11
+ENTRY CHARE 40 reclaimRemote(const CkArrayIndex &idx, int deletedOnPe) 13 11
+ENTRY CHARE 41 dummyAtSync(void) 13 0
+ENTRY CHARE 42 CkLocMgr(CkMigrateMessage* impl_msg) 13 0
+ENTRY CHARE 43 RRMap(void) 15 0
+ENTRY CHARE 44 RRMap(CkMigrateMessage* impl_msg) 15 0
+ENTRY CHARE 45 DefaultArrayMap(void) 16 0
+ENTRY CHARE 46 DefaultArrayMap(CkMigrateMessage* impl_msg) 16 0
+ENTRY CHARE 47 FastArrayMap(void) 17 0
+ENTRY CHARE 48 FastArrayMap(CkMigrateMessage* impl_msg) 17 0
+ENTRY CHARE 49 HilbertArrayMap(void) 18 0
+ENTRY CHARE 50 HilbertArrayMap(CkMigrateMessage* impl_msg) 18 0
+ENTRY CHARE 51 ReadFileMap(void) 19 0
+ENTRY CHARE 52 ReadFileMap(CkMigrateMessage* impl_msg) 19 0
+ENTRY CHARE 53 BlockMap(void) 20 0
+ENTRY CHARE 54 BlockMap(CkMigrateMessage* impl_msg) 20 0
+ENTRY CHARE 55 CldMap(void) 21 0
+ENTRY CHARE 56 CldMap(CkMigrateMessage* impl_msg) 21 0
+ENTRY CHARE 57 ConfigurableRRMap(void) 22 0
+ENTRY CHARE 58 ConfigurableRRMap(CkMigrateMessage* impl_msg) 22 0
+ENTRY CHARE 59 PropMap(void) 23 0
+ENTRY CHARE 60 PropMap(CkMigrateMessage* impl_msg) 23 0
+ENTRY CHARE 61 CkMapsInit(CkArgMsg* impl_msg) 24 0
+ENTRY CHARE 62 CkArrayReductionMgr(void) 25 0
+ENTRY CHARE 63 CkArrayReductionMgr(int dummy, const CkGroupID &gid) 25 11
+ENTRY CHARE 64 setAttachedGroup(const CkGroupID &groupID) 25 11
+ENTRY CHARE 65 CkArrayReductionMgr(CkMigrateMessage* impl_msg) 25 0
+ENTRY CHARE 66 CkArray(const CkArrayOptions &opts, const CkMarshalledMessage &ctorMsg, const CkNodeGroupID &nodereductionProxy) 26 11
+ENTRY CHARE 67 insertElement(CkMessage* impl_msg) 26 -1
+ENTRY CHARE 68 remoteBeginInserting(void) 26 0
+ENTRY CHARE 69 remoteDoneInserting(void) 26 0
+ENTRY CHARE 70 sendBroadcast(CkMessage* impl_msg) 26 -1
+ENTRY CHARE 71 recvBroadcast(CkMessage* impl_msg) 26 -1
+ENTRY CHARE 72 recvBroadcastViaTree(CkMessage* impl_msg) 26 -1
+ENTRY CHARE 73 sendExpeditedBroadcast(CkMessage* impl_msg) 26 -1
+ENTRY CHARE 74 recvExpeditedBroadcast(CkMessage* impl_msg) 26 -1
+ENTRY CHARE 75 ckDestroy(void) 26 0
+ENTRY CHARE 76 CkArray(CkMigrateMessage* impl_msg) 26 0
+ENTRY CHARE 77 ArrayElement(void) 27 0
+ENTRY CHARE 78 ckDestroy(void) 27 0
+ENTRY CHARE 79 recvBroadcast(CkMessage* impl_msg) 27 -1
+ENTRY CHARE 80 inmem_checkpoint(CkArrayCheckPTReqMessage* impl_msg) 27 0
+ENTRY CHARE 81 defrag(CkReductionMsg* impl_msg) 27 8
+ENTRY CHARE 82 ArrayElement(CkMigrateMessage* impl_msg) 27 0
+ENTRY CHARE 83 BaseLB(const CkLBOptions &impl_noname_0) 28 11
+ENTRY CHARE 84 unregister(void) 28 0
+ENTRY CHARE 85 BaseLB(CkMigrateMessage* impl_msg) 28 0
+ENTRY CHARE 86 NullLB(const CkLBOptions &impl_noname_0) 29 11
+ENTRY CHARE 87 migrationsDone(void) 29 0
+ENTRY CHARE 88 NullLB(CkMigrateMessage* impl_msg) 29 0
+ENTRY CHARE 89 LBDBInit(CkArgMsg* impl_msg) 30 0
+ENTRY CHARE 90 LBDatabase(void) 31 0
+ENTRY CHARE 91 ResumeClients(void) 31 0
+ENTRY CHARE 92 LBDatabase(CkMigrateMessage* impl_msg) 31 0
+ENTRY CHARE 93 MetaLBInit(CkArgMsg* impl_msg) 32 0
+ENTRY CHARE 94 MetaBalancer(void) 33 0
+ENTRY CHARE 95 ReceiveMinStats(CkReductionMsg* impl_msg) 33 8
+ENTRY CHARE 96 LoadBalanceDecision(int req_no, int period) 33 11
+ENTRY CHARE 97 LoadBalanceDecisionFinal(int req_no, int period) 33 11
+ENTRY CHARE 98 ReceiveIterationNo(int impl_noname_0) 33 11
+ENTRY CHARE 99 RegisterNoObjCallback(int impl_noname_1) 33 11
+ENTRY CHARE 100 TriggerAdaptiveReduction(void) 33 0
+ENTRY CHARE 101 MetaLBCallLBOnChares(void) 33 0
+ENTRY CHARE 102 MetaBalancer(CkMigrateMessage* impl_msg) 33 0
+ENTRY CHARE 103 MetaBalancerRedn(void) 34 0
+ENTRY CHARE 104 ReceiveIterNo(int max_iter) 34 11
+ENTRY CHARE 105 redn_wrapper_ReceiveIterNo(CkReductionMsg *impl_msg) 34 11
+ENTRY CHARE 106 getMaxIter(int impl_noname_2) 34 11
+ENTRY CHARE 107 MetaBalancerRedn(CkMigrateMessage* impl_msg) 34 0
+ENTRY CHARE 108 ckcallback_main(CkArgMsg* impl_msg) 35 0
+ENTRY CHARE 109 ckcallback_group(void) 36 0
+ENTRY CHARE 110 registerCcsCallback(const char *name, const CkCallback &cb) 36 11
+ENTRY CHARE 111 call(const CkCallback &c, const CkMarshalledMessage &msg) 36 11
+ENTRY CHARE 112 ckcallback_group(CkMigrateMessage* impl_msg) 36 0
+ENTRY CHARE 113 TempoChare(void) 37 0
+ENTRY CHARE 114 tempoGeneric(TempoMessage* impl_msg) 37 20
+ENTRY CHARE 115 TempoGroup(void) 38 0
+ENTRY CHARE 116 tempoGeneric(TempoMessage* impl_msg) 38 20
+ENTRY CHARE 117 TempoGroup(CkMigrateMessage* impl_msg) 38 0
+ENTRY CHARE 118 TempoArray(void) 39 0
+ENTRY CHARE 119 tempoGeneric(TempoMessage* impl_msg) 39 20
+ENTRY CHARE 120 TempoArray(CkMigrateMessage* impl_msg) 39 0
+ENTRY CHARE 121 waitqd_QDChare(CkArgMsg* impl_msg) 40 0
+ENTRY CHARE 122 waitQD(void) 40 0
+ENTRY CHARE 123 onQD(CkQdMsg* impl_msg) 40 5
+ENTRY CHARE 124 waitqd_QDChare(CkMigrateMessage* impl_msg) 40 0
+ENTRY CHARE 125 CkCheckpointMgr(void) 41 0
+ENTRY CHARE 126 Checkpoint(const char *dirname, const CkCallback &cb, const bool &requestStatus) 41 11
+ENTRY CHARE 127 SendRestartCB(CkReductionMsg* impl_msg) 41 8
+ENTRY CHARE 128 CkCheckpointMgr(CkMigrateMessage* impl_msg) 41 0
+ENTRY CHARE 129 CkCheckpointInit(CkArgMsg* impl_msg) 42 0
+ENTRY CHARE 130 Main(CkArgMsg* impl_msg) 43 0
+ENTRY CHARE 131 setupICs(void) 43 0
+ENTRY CHARE 132 initialForces(void) 43 0
+ENTRY CHARE 133 doSimulation(void) 43 0
+ENTRY CHARE 134 restart(CkCheckpointStatusMsg* impl_msg) 43 21
+ENTRY CHARE 135 cbOpen(Ck::IO::FileReadyMsg* impl_msg) 43 0
+ENTRY CHARE 136 cbIOReady(Ck::IO::SessionReadyMsg* impl_msg) 43 0
+ENTRY CHARE 137 cbIOComplete(CkMessage* impl_msg) 43 -1
+ENTRY CHARE 138 cbIOClosed(CkMessage* impl_msg) 43 -1
+ENTRY CHARE 139 niceExit(void) 43 0
+ENTRY CHARE 140 liveVizImagePrep(liveVizRequestMsg* impl_msg) 43 0
+ENTRY CHARE 141 Main(CkMigrateMessage* impl_msg) 43 0
+ENTRY CHARE 142 ProjectionsControl(void) 44 0
+ENTRY CHARE 143 on(const CkCallback &impl_noname_0) 44 11
+ENTRY CHARE 144 off(const CkCallback &impl_noname_1) 44 11
+ENTRY CHARE 145 ProjectionsControl(CkMigrateMessage* impl_msg) 44 0
+ENTRY CHARE 146 ReductionHelper(void) 45 0
+ENTRY CHARE 147 countTreePieces(const CkCallback &cb) 45 11
+ENTRY CHARE 148 evaluateBoundaries(const SFC::Key *keys, int n, int isRefine, const CkCallback &cb) 45 11
+ENTRY CHARE 149 evaluateBoundaries(const CkBitVector &binsToSplit, const CkCallback &cb) 45 11
+ENTRY CHARE 150 ReductionHelper(CkMigrateMessage* impl_msg) 45 0
+ENTRY CHARE 151 Sorter(void) 46 0
+ENTRY CHARE 152 startSorting(const CkGroupID &dataManagerID, double toler, const CkCallback &cb, const bool &decompose) 46 11
+ENTRY CHARE 153 collectEvaluations(CkReductionMsg* impl_msg) 46 8
+ENTRY CHARE 154 collectORBCounts(CkReductionMsg* impl_msg) 46 8
+ENTRY CHARE 155 finishPhase(CkReductionMsg* impl_msg) 46 8
+ENTRY CHARE 156 doORBDecomposition(CkReductionMsg* impl_msg) 46 8
+ENTRY CHARE 157 readytoSendORB(CkReductionMsg* impl_msg) 46 8
+ENTRY CHARE 158 Sorter(CkMigrateMessage* impl_msg) 46 0
+ENTRY CHARE 159 DataManager(const CkArrayID &treePieceID) 47 11
+ENTRY CHARE 160 acceptResponsibleIndex(const int *responsible, int n, const CkCallback &cb) 47 11
+ENTRY CHARE 161 acceptFinalKeys(const SFC::Key *keys, const int *responsible, const uint64_t *bins, int n, const CkCallback &cb) 47 11
+ENTRY CHARE 162 combineLocalTrees(CkReductionMsg* impl_msg) 47 8
+ENTRY CHARE 163 clearInstrument(const CkCallback &cb) 47 11
+ENTRY CHARE 164 initCooling(double dGmPerCcUnit, double dComovingGmPerCcUnit, double dErgPerGmUnit, double dSecUnit, double dKpcUnit, const COOLPARAM &inParam, const CkCallback &cb) 47 11
+ENTRY CHARE 165 dmCoolTableRead(const double *dTableData, int nData, const CkCallback &cb) 47 11
+ENTRY CHARE 166 CoolingSetTime(double z, double dTime, const CkCallback &cb) 47 11
+ENTRY CHARE 167 SetStarCM(const double *dCenterOfMass, const CkCallback &cb) 47 11
+ENTRY CHARE 168 memoryStats(const CkCallback &cb) 47 11
+ENTRY CHARE 169 resetReadOnly(const Parameters &param, const CkCallback &cb) 47 11
+ENTRY CHARE 170 initStarLog(const std::string &_fileName, const CkCallback &cb) 47 11
+ENTRY CHARE 171 DataManager(CkMigrateMessage* impl_msg) 47 0
+ENTRY CHARE 172 TreePiece(void) 48 0
+ENTRY CHARE 173 quiescence(void) 48 0
+ENTRY CHARE 174 memCacheStats(const CkCallback &cb) 48 11
+ENTRY CHARE 175 nextBucket(dummyMsg* impl_msg) 48 22
+ENTRY CHARE 176 nextBucketSmooth(dummyMsg* impl_msg) 48 22
+ENTRY CHARE 177 nextBucketReSmooth(dummyMsg* impl_msg) 48 22
+ENTRY CHARE 178 nextBucketMarkSmooth(dummyMsg* impl_msg) 48 22
+ENTRY CHARE 179 setPeriodic(int nReplicas, const Vector3D<double > &fPeriod, int bEwald, double fEwCut, double fEwhCut, int bPeriod, int bComove, double dRhoFac) 48 11
+ENTRY CHARE 180 EwaldInit(void) 48 0
+ENTRY CHARE 181 initCoolingData(const CkCallback &cb) 48 11
+ENTRY CHARE 182 calculateEwald(dummyMsg* impl_msg) 48 22
+ENTRY CHARE 183 EwaldGPUComplete(void) 48 0
+ENTRY CHARE 184 EwaldGPU(void) 48 0
+ENTRY CHARE 185 velScale(double dScale, const CkCallback &cb) 48 11
+ENTRY CHARE 186 loadNChilada(const std::string &filename, double dTuFac, const CkCallback &cb) 48 11
+ENTRY CHARE 187 readFloatBinary(const CkReference<OutputParams > &params, int bParaRead, const CkCallback &cb) 48 11
+ENTRY CHARE 188 loadTipsy(const std::string &filename, double dTuFac, bool bDoublePos, bool bDoubleVel, const CkCallback &cb) 48 11
+ENTRY CHARE 189 readTipsyArray(const CkReference<OutputParams > &params, const CkCallback &cb) 48 11
+ENTRY CHARE 190 resetMetals(const CkCallback &cb) 48 11
+ENTRY CHARE 191 getMaxIOrds(const CkCallback &cb) 48 11
+ENTRY CHARE 192 RestartEnergy(double dTuFac, const CkCallback &cb) 48 11
+ENTRY CHARE 193 findTotalMass(const CkCallback &cb) 48 11
+ENTRY CHARE 194 recvTotalMass(CkReductionMsg* impl_msg) 48 8
+ENTRY CHARE 195 setupWrite(int iStage, const u_int64_t &iPrevOffset, const std::string &filename, double dTime, double dvFac, double duTfac, bool bDoublePos, bool bDoubleVel, int bCool, const CkCallback &cb) 48 11
+ENTRY CHARE 196 parallelWrite(int iPass, const CkCallback &cb, const std::string &filename, double dTime, double dvFac, double duTFac, bool bDoublePos, bool bDoubleVel, int bCool) 48 11
+ENTRY CHARE 197 serialWrite(const u_int64_t &iPrevOffset, const std::string &filename, double dTime, double dvFac, double duTfac, bool bDoublePos, bool bDoubleVel, int bCool, const CkCallback &cb) 48 11
+ENTRY CHARE 198 oneNodeWrite(int iIndex, int iOutParticles, int iOutSPH, int iOutStar, const GravityParticle *particles, const extraSPHData *pGas, const extraStarData *pStar, const int *piSPH, const int *piStar, u_int64_t iPrevOffset, const std::string &filename, double dTime, double dvFac, double duTFac, bool bDoublePos, bool bDoubleVel, int bCool, const CkCallback &cb) 48 11
+ENTRY CHARE 199 reOrder(const int64_t &nMaxOrder, const CkCallback &cb) 48 11
+ENTRY CHARE 200 ioShuffle(CkReductionMsg* impl_msg) 48 8
+ENTRY CHARE 201 ioAcceptSortedParticles(ParticleShuffleMsg* impl_msg) 48 25
+ENTRY CHARE 202 assignKeys(CkReductionMsg* impl_msg) 48 8
+ENTRY CHARE 203 evaluateBoundaries(const SFC::Key *keys, int n, int isRefine, const CkCallback &cb) 48 11
+ENTRY CHARE 204 unshuffleParticles(CkReductionMsg* impl_msg) 48 8
+ENTRY CHARE 205 acceptSortedParticles(ParticleShuffleMsg* impl_msg) 48 25
+ENTRY CHARE 206 unshuffleParticlesWoDD(const CkCallback &cb) 48 11
+ENTRY CHARE 207 shuffleAfterQD(void) 48 0
+ENTRY CHARE 208 acceptSortedParticlesFromOther(ParticleShuffleMsg* impl_msg) 48 25
+ENTRY CHARE 209 initORBPieces(const CkCallback &cb) 48 11
+ENTRY CHARE 210 initBeforeORBSend(unsigned int myCount, unsigned int myCountGas, unsigned int myCountStar, const CkCallback &cb, const CkCallback &cback) 48 11
+ENTRY CHARE 211 sendORBParticles(void) 48 0
+ENTRY CHARE 212 acceptORBParticles(const GravityParticle *particles, int n, const extraSPHData *pGas, int nGasIn, const extraStarData *pStar, int nStarIn) 48 11
+ENTRY CHARE 213 finalizeBoundaries(ORBSplittersMsg* impl_msg) 48 24
+ENTRY CHARE 214 evaluateParticleCounts(ORBSplittersMsg* impl_msg) 48 24
+ENTRY CHARE 215 kick(int iKickRung, const double *dDelta, int bClosing, int bNeedVPred, int bGasIsothermal, const double *duDelta, const CkCallback &cb) 48 11
+ENTRY CHARE 216 initAccel(int iKickRung, const CkCallback &cb) 48 11
+ENTRY CHARE 217 adjust(int iKickRung, int bEpsAccStep, int bGravStep, int bSphStep, int bViscosityLimitdt, double dEta, double dEtaCourant, double dEtauDot, double dDelta, double dAccFac, double dCosmoFac, double dhMinOverSoft, double dResolveJeans, int bDoGas, const CkCallback &cb) 48 11
+ENTRY CHARE 218 truncateRung(int iCurrMaxRung, const CkCallback &cb) 48 11
+ENTRY CHARE 219 rungStats(const CkCallback &cb) 48 11
+ENTRY CHARE 220 countActive(int activeRung, const CkCallback &cb) 48 11
+ENTRY CHARE 221 assignDomain(const CkCallback &cb) 48 11
+ENTRY CHARE 222 drift(double dDelta, int bNeedVPred, int bGasIsoThermal, double dvDelta, double duDelta, int nGrowMass, const bool &buildTree, const CkCallback &cb) 48 11
+ENTRY CHARE 223 starCenterOfMass(const CkCallback &cb) 48 11
+ENTRY CHARE 224 calcEnergy(const CkCallback &cb) 48 11
+ENTRY CHARE 225 colNParts(const CkCallback &cb) 48 11
+ENTRY CHARE 226 newOrder(const NewMaxOrder *nStarts, int n, const CkCallback &cb) 48 11
+ENTRY CHARE 227 setNParts(const int64_t &_nTotalSPH, const int64_t &_nTotalDark, const int64_t &_nTotalStar, const CkCallback &cb) 48 11
+ENTRY CHARE 228 setSoft(double dSoft, const CkCallback &cb) 48 11
+ENTRY CHARE 229 physicalSoft(double dSoftMax, double dFac, int bSoftMaxMul, const CkCallback &cb) 48 11
+ENTRY CHARE 230 growMass(int nGrowMass, double dDeltaM, const CkCallback &cb) 48 11
+ENTRY CHARE 231 InitEnergy(double dTuFac, double z, double dTime, const CkCallback &cb) 48 11
+ENTRY CHARE 232 updateuDot(int activeRung, const double *duDelta, const double *dStartTime, int bCool, int bAll, int bUpdateState, const CkCallback &cb) 48 11
+ENTRY CHARE 233 ballMax(int activeRung, double dFac, const CkCallback &cb) 48 11
+ENTRY CHARE 234 sphViscosityLimiter(int bOn, int activeRung, const CkCallback &cb) 48 11
+ENTRY CHARE 235 getAdiabaticGasPressure(double gamma, double gammam1, const CkCallback &cb) 48 11
+ENTRY CHARE 236 getCoolingGasPressure(double gamma, double gammam1, double dResolveJeans, const CkCallback &cb) 48 11
+ENTRY CHARE 237 initRand(int iRand, const CkCallback &cb) 48 11
+ENTRY CHARE 238 FormStars(const Stfm &param, double dTime, double dDelta, double dCosmoFac, const CkCallback &cb) 48 11
+ENTRY CHARE 239 flushStarLog(const CkCallback &cb) 48 11
+ENTRY CHARE 240 Feedback(const Fdbk &fb, double dTime, double dDelta, const CkCallback &cb) 48 11
+ENTRY CHARE 241 massMetalsEnergyCheck(int bPreDist, const CkCallback &cb) 48 11
+ENTRY CHARE 242 setTypeFromFile(int iSetMask, const char *file, const CkCallback &cb) 48 11
+ENTRY CHARE 243 getCOM(const CkCallback &cb, int bLiveViz) 48 11
+ENTRY CHARE 244 getCOMByType(int iType, const CkCallback &cb, int bLiveViz) 48 11
+ENTRY CHARE 245 DumpFrame(const InDumpFrame &in, const CkCallback &cb, int liveVizDump) 48 11
+ENTRY CHARE 246 liveVizDumpFrameInit(liveVizRequestMsg* impl_msg) 48 0
+ENTRY CHARE 247 setProjections(int bOn) 48 11
+ENTRY CHARE 248 buildTree(int bucketSize, const CkCallback &cb) 48 11
+ENTRY CHARE 249 startOctTreeBuild(CkReductionMsg* impl_msg) 48 8
+ENTRY CHARE 250 recvBoundary(const SFC::Key &key, const NborDir &dir) 48 11
+ENTRY CHARE 251 recvdBoundaries(CkReductionMsg* impl_msg) 48 8
+ENTRY CHARE 252 startORBTreeBuild(CkReductionMsg* impl_msg) 48 8
+ENTRY CHARE 253 startGravity(int activeRung, double myTheta, const CkCallback &cb) 48 11
+ENTRY CHARE 254 startSmooth(const CkPointer<SmoothParams > &impl_noname_2, int iLowhFix, int nSmooth, double dfBall2OverSoft2, const CkCallback &cb) 48 11
+ENTRY CHARE 255 startReSmooth(const CkPointer<SmoothParams > &impl_noname_3, const CkCallback &cb) 48 11
+ENTRY CHARE 256 startMarkSmooth(const CkPointer<SmoothParams > &impl_noname_4, const CkCallback &cb) 48 11
+ENTRY CHARE 257 finishNodeCache(const CkCallback &cb) 48 11
+ENTRY CHARE 258 requestRemoteMoments(const Tree::NodeKey &key, int sender) 48 11
+ENTRY CHARE 259 receiveRemoteMoments(const Tree::NodeKey &key, const Tree::NodeType &type, int firstParticle, int numParticles, int remIdx, const MultipoleMoments &moments, const OrientedBox<double > &box, const OrientedBox<double > &boxBall, unsigned int iParticleTypes) 48 11
+ENTRY CHARE 260 commenceCalculateGravityLocal(void) 48 0
+ENTRY CHARE 261 calculateGravityRemote(ComputeChunkMsg* impl_msg) 48 23
+ENTRY CHARE 262 calculateReSmoothLocal(void) 48 0
+ENTRY CHARE 263 calculateMarkSmoothLocal(void) 48 0
+ENTRY CHARE 264 finishWalk(void) 48 0
+ENTRY CHARE 265 finishSmoothWalk(void) 48 0
+ENTRY CHARE 266 fillRequestNode(CkCacheRequestMsg<KeyType >* impl_msg) 48 0
+ENTRY CHARE 267 receiveNodeCallback(GenericTreeNode* impl_msg, int chunk, int reqID, int awi, void* source) 48 11
+ENTRY CHARE 268 fillRequestParticles(CkCacheRequestMsg<KeyType >* impl_msg) 48 0
+ENTRY CHARE 269 fillRequestSmoothParticles(CkCacheRequestMsg<KeyType >* impl_msg) 48 0
+ENTRY CHARE 270 flushSmoothParticles(CkCacheFillMsg<KeyType >* impl_msg) 48 0
+ENTRY CHARE 271 receiveParticlesCallback(ExternalGravityParticle* impl_msg, int num, int chunk, int reqID, const Tree::NodeKey &remoteBucket, int awi, void* source) 48 11
+ENTRY CHARE 272 receiveParticlesFullCallback(GravityParticle* impl_msg, int num, int chunk, int reqID, const Tree::NodeKey &remoteBucket, int awi, void* source) 48 11
+ENTRY CHARE 273 startlb(const CkCallback &cb, int activeRung) 48 11
+ENTRY CHARE 274 ResumeFromSync(void) 48 0
+ENTRY CHARE 275 getParticleInfoForLB(const int64_t &active_part, const int64_t &total_part) 48 11
+ENTRY CHARE 276 redn_wrapper_getParticleInfoForLB(CkReductionMsg *impl_msg) 48 11
+ENTRY CHARE 277 doAtSync(void) 48 0
+ENTRY CHARE 278 outputAccelerations(const OrientedBox<double > &accelerationBox, const std::string &suffix, const CkCallback &cb) 48 11
+ENTRY CHARE 279 outputASCII(const CkReference<OutputParams > &impl_noname_5, int bParaWrite, const CkCallback &cb) 48 11
+ENTRY CHARE 280 oneNodeOutVec(const CkReference<OutputParams > &impl_noname_6, const Vector3D<double > *avOut, int nPart, int iIndex, int bDone, const CkCallback &cb) 48 11
+ENTRY CHARE 281 oneNodeOutArr(const CkReference<OutputParams > &impl_noname_7, const double *adOut, int nPart, int iIndex, int bDone, const CkCallback &cb) 48 11
+ENTRY CHARE 282 outputBinary(const Ck::IO::Session &impl_noname_8, const CkReference<OutputParams > &impl_noname_9) 48 11
+ENTRY CHARE 283 minmaxNCOut(const CkReference<OutputParams > &params, const CkCallback &cb) 48 11
+ENTRY CHARE 284 outputBinaryStart(const CkReference<OutputParams > &params, const int64_t &nStart, const CkCallback &cb) 48 11
+ENTRY CHARE 285 oneNodeOutIntArr(const CkReference<OutputParams > &impl_noname_a, const int *aiOut, int nPart, int iIndex, const CkCallback &cb) 48 11
+ENTRY CHARE 286 outputStatistics(const CkCallback &cb) 48 11
+ENTRY CHARE 287 collectStatistics(const CkCallback &cb) 48 11
+ENTRY CHARE 288 continueStartRemoteChunk(int chunk) 48 11
+ENTRY CHARE 289 continueWrapUp(void) 48 0
+ENTRY CHARE 290 balanceBeforeInitialForces(const CkCallback &cb) 48 11
+ENTRY CHARE 291 TreePiece(CkMigrateMessage* impl_msg) 48 0
+ENTRY CHARE 292 LvArray(void) 49 0
+ENTRY CHARE 293 LvArray(CkMigrateMessage* impl_msg) 49 0
+ENTRY CHARE 294 PETreeMerger(void) 50 0
+ENTRY CHARE 295 PETreeMerger(CkMigrateMessage* impl_msg) 50 0
+ENTRY CHARE 296 DumpFrameData(void) 51 0
+ENTRY CHARE 297 clearFrame(const InDumpFrame &in, const CkCallback &cb) 51 11
+ENTRY CHARE 298 combineFrame(const InDumpFrame &in, const CkCallback &cb) 51 11
+ENTRY CHARE 299 DumpFrameData(CkMigrateMessage* impl_msg) 51 0
+ENTRY CHARE 300 IntraNodeLBManager(int dummy, const CkGroupID &gid) 52 11
+ENTRY CHARE 301 registerTP(void) 52 0
+ENTRY CHARE 302 finishedTPWork(void) 52 0
+ENTRY CHARE 303 IntraNodeLBManager(CkMigrateMessage* impl_msg) 52 0
+ENTRY CHARE 304 CkCacheManager(int size, const CkGroupID &gid) 53 11
+ENTRY CHARE 305 CkCacheManager(int size, int n, const CkGroupID *gid) 53 11
+ENTRY CHARE 306 CkCacheManager(int size, int n, const CkGroupID *gid, int nWB, const CkGroupID *gidWB) 53 11
+ENTRY CHARE 307 cacheSync(const int &numChunks, const CkArrayIndex &chareIdx, const int &localIdx) 53 11
+ENTRY CHARE 308 recvData(CkCacheFillMsg<CkCacheKey >* impl_msg) 53 26
+ENTRY CHARE 309 writebackChunk(int num) 53 11
+ENTRY CHARE 310 finishedChunk(int num, const CmiUInt8 &weight) 53 11
+ENTRY CHARE 311 collectStatistics(const CkCallback &cb) 53 11
+ENTRY CHARE 312 CkCacheManager(CkMigrateMessage* impl_msg) 53 0
+ENTRY CHARE 313 CkCacheManager(int size, const CkGroupID &gid) 54 11
+ENTRY CHARE 314 CkCacheManager(int size, int n, const CkGroupID *gid) 54 11
+ENTRY CHARE 315 CkCacheManager(int size, int n, const CkGroupID *gid, int nWB, const CkGroupID *gidWB) 54 11
+ENTRY CHARE 316 cacheSync(const int &numChunks, const CkArrayIndex &chareIdx, const int &localIdx) 54 11
+ENTRY CHARE 317 recvData(CkCacheFillMsg<CkCacheKey >* impl_msg) 54 29
+ENTRY CHARE 318 writebackChunk(int num) 54 11
+ENTRY CHARE 319 finishedChunk(int num, const CmiUInt8 &weight) 54 11
+ENTRY CHARE 320 collectStatistics(const CkCallback &cb) 54 11
+ENTRY CHARE 321 CkCacheManager(CkMigrateMessage* impl_msg) 54 0
+ENTRY CHARE 322 CkMulticastMgr(int _factor, unsigned int _split_size, unsigned int _split_threshold) 55 11
+ENTRY CHARE 323 setup(multicastSetupMsg* impl_msg) 55 34
+ENTRY CHARE 324 recvCookie(const CkSectionInfo &sid, const CkSectionInfo &child) 55 11
+ENTRY CHARE 325 teardown(const CkSectionInfo &sid) 55 11
+ENTRY CHARE 326 freeup(const CkSectionInfo &sid) 55 11
+ENTRY CHARE 327 retrieveCookie(const CkSectionInfo &s, const CkSectionInfo &srcInfo) 55 11
+ENTRY CHARE 328 recvCookieInfo(const CkSectionInfo &s, int red) 55 11
+ENTRY CHARE 329 retire(const CkSectionInfo &sid, const CkSectionInfo &root) 55 11
+ENTRY CHARE 330 recvMsg(multicastGrpMsg* impl_msg) 55 35
+ENTRY CHARE 331 sendToLocal(multicastGrpMsg* impl_msg) 55 35
+ENTRY CHARE 332 recvPacket(const CkSectionInfo &_cookie, int offset, int n, const char *data, int seqno, int count, int totalsize, int frombufer) 55 11
+ENTRY CHARE 333 recvRedMsg(CkReductionMsg* impl_msg) 55 8
+ENTRY CHARE 334 updateRedNo(const mCastEntryPtr &e, int no) 55 11
+ENTRY CHARE 335 CkMulticastMgr(CkMigrateMessage* impl_msg) 55 0
+ENTRY CHARE 336 CentralLB(const CkLBOptions &impl_noname_0) 56 11
+ENTRY CHARE 337 ProcessAtSync(void) 56 0
+ENTRY CHARE 338 SendStats(void) 56 0
+ENTRY CHARE 339 ReceiveStats(const CkMarshalledCLBStatsMessage &data) 56 11
+ENTRY CHARE 340 ReceiveStatsViaTree(const CkMarshalledCLBStatsMessage &data) 56 11
+ENTRY CHARE 341 ReceiveCounts(CkReductionMsg* impl_msg) 56 8
+ENTRY CHARE 342 LoadBalance(void) 56 0
+ENTRY CHARE 343 t_LoadBalance(void) 56 0
+ENTRY CHARE 344 ResumeClients(int impl_noname_1) 56 11
+ENTRY CHARE 345 ResumeClients(CkReductionMsg* impl_msg) 56 8
+ENTRY CHARE 346 changeFreq(int impl_noname_2) 56 11
+ENTRY CHARE 347 ScatterMigrationResults(LBScatterMsg* impl_msg) 56 16
+ENTRY CHARE 348 ReceiveMigration(LBMigrateMsg* impl_msg) 56 15
+ENTRY CHARE 349 ReceiveMigration(LBScatterMsg* impl_msg) 56 16
+ENTRY CHARE 350 ProcessReceiveMigration(CkReductionMsg* impl_msg) 56 8
+ENTRY CHARE 351 ProcessMigrationDecision(CkReductionMsg* impl_msg) 56 8
+ENTRY CHARE 352 MissMigrate(int impl_noname_3) 56 11
+ENTRY CHARE 353 CheckForRealloc(void) 56 0
+ENTRY CHARE 354 ResumeFromReallocCheckpoint(void) 56 0
+ENTRY CHARE 355 MigrationDoneImpl(int impl_noname_4) 56 11
+ENTRY CHARE 356 WillIbekilled(const std::vector<char > &avail, int impl_noname_5) 56 11
+ENTRY CHARE 357 StartCleanup(void) 56 0
+ENTRY CHARE 358 CentralLB(CkMigrateMessage* impl_msg) 56 0
+ENTRY CHARE 359 RefineLB(const CkLBOptions &impl_noname_0) 57 11
+ENTRY CHARE 360 RefineLB(CkMigrateMessage* impl_msg) 57 0
+ENTRY CHARE 361 RefineCommLB(const CkLBOptions &impl_noname_0) 58 11
+ENTRY CHARE 362 RefineCommLB(CkMigrateMessage* impl_msg) 58 0
+ENTRY CHARE 363 GreedyLB(const CkLBOptions &impl_noname_0) 59 11
+ENTRY CHARE 364 GreedyLB(CkMigrateMessage* impl_msg) 59 0
+ENTRY CHARE 365 GreedyCommLB(const CkLBOptions &impl_noname_0) 60 11
+ENTRY CHARE 366 GreedyCommLB(CkMigrateMessage* impl_msg) 60 0
+ENTRY CHARE 367 OrbLB(const CkLBOptions &impl_noname_0) 61 11
+ENTRY CHARE 368 OrbLB(const CkLBOptions &impl_noname_1, const bool &userdata) 61 11
+ENTRY CHARE 369 OrbLB(CkMigrateMessage* impl_msg) 61 0
+ENTRY CHARE 370 RotateLB(const CkLBOptions &impl_noname_0) 62 11
+ENTRY CHARE 371 RotateLB(CkMigrateMessage* impl_msg) 62 0
+ENTRY CHARE 372 MultistepLB(const CkLBOptions &impl_noname_0) 63 11
+ENTRY CHARE 373 MultistepLB(CkMigrateMessage* impl_msg) 63 0
+ENTRY CHARE 374 MultistepLB_notopo(const CkLBOptions &impl_noname_0) 64 11
+ENTRY CHARE 375 MultistepLB_notopo(CkMigrateMessage* impl_msg) 64 0
+ENTRY CHARE 376 MultistepNodeLB_notopo(const CkLBOptions &impl_noname_0) 65 11
+ENTRY CHARE 377 MultistepNodeLB_notopo(CkMigrateMessage* impl_msg) 65 0
+ENTRY CHARE 378 MultistepOrbLB(const CkLBOptions &impl_noname_0) 66 11
+ENTRY CHARE 379 MultistepOrbLB(CkMigrateMessage* impl_msg) 66 0
+ENTRY CHARE 380 Orb3dLB(const CkLBOptions &impl_noname_0) 67 11
+ENTRY CHARE 381 Orb3dLB(CkMigrateMessage* impl_msg) 67 0
+ENTRY CHARE 382 Orb3dLB_notopo(const CkLBOptions &impl_noname_0) 68 11
+ENTRY CHARE 383 Orb3dLB_notopo(CkMigrateMessage* impl_msg) 68 0
+ENTRY CHARE 384 HybridBaseLB(const CkLBOptions &impl_noname_0) 69 11
+ENTRY CHARE 385 ProcessAtSync(void) 69 0
+ENTRY CHARE 386 ReceiveStats(const CkMarshalledCLBStatsMessage &data, int level) 69 11
+ENTRY CHARE 387 ResumeClients(CkReductionMsg* impl_msg) 69 8
+ENTRY CHARE 388 ResumeClients(int balancing) 69 11
+ENTRY CHARE 389 ReceiveMigration(LBMigrateMsg* impl_msg) 69 15
+ENTRY CHARE 390 ReceiveVectorMigration(LBVectorMigrateMsg* impl_msg) 69 17
+ENTRY CHARE 391 TotalObjMigrated(int count, int level) 69 11
+ENTRY CHARE 392 ObjMigrated(const LDObjData &data, const LDCommData *cdata, int n, int level) 69 11
+ENTRY CHARE 393 ObjsMigrated(const CkVec<LDObjData > &data, int m, const LDCommData *cdata, int n, int level) 69 11
+ENTRY CHARE 394 Loadbalancing(int level) 69 11
+ENTRY CHARE 395 NotifyObjectMigrationDone(int impl_noname_1) 69 11
+ENTRY CHARE 396 StartCollectInfo(DummyMsg* impl_msg) 69 36
+ENTRY CHARE 397 CollectInfo(const Location *loc, int n, int fromlevel) 69 11
+ENTRY CHARE 398 PropagateInfo(const Location *loc, int n, int fromlevel) 69 11
+ENTRY CHARE 399 reportLBQulity(double impl_noname_2, double impl_noname_3, double impl_noname_4, int impl_noname_5, double impl_noname_6) 69 11
+ENTRY CHARE 400 reportLBMem(double impl_noname_7) 69 11
+ENTRY CHARE 401 HybridBaseLB(CkMigrateMessage* impl_msg) 69 0
+ENTRY CHARE 402 HierarchOrbLB(const CkLBOptions &impl_noname_0) 70 11
+ENTRY CHARE 403 HierarchOrbLB(CkMigrateMessage* impl_msg) 70 0
+ENTRY CHARE 404 liveVizPollArray(void) 71 0
+ENTRY CHARE 405 request(liveVizRequestMsg* impl_msg) 71 37
+ENTRY CHARE 406 liveVizPoll0Deposit(int wid, int ht, int bpp, int len, const byte *imageData) 71 11
+ENTRY CHARE 407 liveVizGroup(const liveVizConfig &cfg) 72 11
+ENTRY CHARE 408 liveVizGroup(CkMigrateMessage* impl_msg) 72 0
+ENTRY CHARE 409 LiveVizBoundElement(void) 73 0
+ENTRY CHARE 410 deposit(CkReductionMsg* impl_msg) 73 8
+ENTRY CHARE 411 LiveVizBoundElement(CkMigrateMessage* impl_msg) 73 0
+ENTRY CHARE 412 FuncCkLoop(int mode, int numThreads) 74 11
+ENTRY CHARE 413 registerHelper(HelperNotifyMsg* impl_msg) 74 39
+ENTRY CHARE 414 exit(void) 74 0
+ENTRY CHARE 415 FuncCkLoop(CkMigrateMessage* impl_msg) 74 0
+ENTRY CHARE 416 FuncSingleHelper(void) 75 0
+ENTRY CHARE 417 stealWork(CharmNotifyMsg* impl_msg) 75 38
+ENTRY CHARE 418 destroyMyself(void) 75 0
+ENTRY CHARE 419 FuncSingleHelper(CkMigrateMessage* impl_msg) 75 0
+ENTRY CHARE 420 TraceProjectionsInit(CkArgMsg* impl_msg) 76 0
+ENTRY CHARE 421 KMeansBOC(const bool &impl_noname_0, int impl_noname_1, int impl_noname_2, double impl_noname_3, const bool &impl_noname_4) 77 11
+ENTRY CHARE 422 startKMeansAnalysis(void) 77 0
+ENTRY CHARE 423 flushCheck(CkReductionMsg* impl_msg) 77 8
+ENTRY CHARE 424 flushCheckDone(void) 77 0
+ENTRY CHARE 425 getNextPhaseMetrics(void) 77 0
+ENTRY CHARE 426 globalMetricRefinement(CkReductionMsg* impl_msg) 77 8
+ENTRY CHARE 427 findInitialClusters(KMeansStatsMessage* impl_msg) 77 41
+ENTRY CHARE 428 updateKSeeds(CkReductionMsg* impl_msg) 77 8
+ENTRY CHARE 429 updateSeedMembership(KSeedsMessage* impl_msg) 77 42
+ENTRY CHARE 430 collectDistances(KSelectionMessage* impl_msg) 77 43
+ENTRY CHARE 431 findNextMinMax(CkReductionMsg* impl_msg) 77 8
+ENTRY CHARE 432 phaseDone(void) 77 0
+ENTRY CHARE 433 KMeansBOC(CkMigrateMessage* impl_msg) 77 0
+ENTRY CHARE 434 TraceProjectionsBOC(const bool &impl_noname_5, const bool &impl_noname_6) 78 11
+ENTRY CHARE 435 traceProjectionsParallelShutdown(int impl_noname_7) 78 11
+ENTRY CHARE 436 startTimeAnalysis(void) 78 0
+ENTRY CHARE 437 startTimeDone(CkReductionMsg* impl_msg) 78 8
+ENTRY CHARE 438 startEndTimeAnalysis(void) 78 0
+ENTRY CHARE 439 endTimeDone(CkReductionMsg* impl_msg) 78 8
+ENTRY CHARE 440 kMeansDone(void) 78 0
+ENTRY CHARE 441 kMeansDone(CkReductionMsg* impl_msg) 78 8
+ENTRY CHARE 442 finalize(void) 78 0
+ENTRY CHARE 443 closingTraces(void) 78 0
+ENTRY CHARE 444 closeParallelShutdown(CkReductionMsg* impl_msg) 78 8
+ENTRY CHARE 445 flush_warning(int pe) 78 11
+ENTRY CHARE 446 TraceProjectionsBOC(CkMigrateMessage* impl_msg) 78 0
+ENTRY CHARE 447 Director(CkArgMsg* impl_msg) 79 0
+ENTRY CHARE 448 openFile(const std::string &name, const CkCallback &opened, const Options &opts) 79 11
+ENTRY CHARE 449 fileOpened(const FileToken &file) 79 11
+ENTRY CHARE 450 redn_wrapper_fileOpened(CkReductionMsg *impl_msg) 79 11
+ENTRY CHARE 451 sessionComplete(const FileToken &file) 79 11
+ENTRY CHARE 452 redn_wrapper_sessionComplete(CkReductionMsg *impl_msg) 79 11
+ENTRY CHARE 453 prepareWriteSession(const FileToken &file, const size_t &bytes, const size_t &offset, const CkCallback &ready, const CkCallback &complete) 79 11
+ENTRY CHARE 454 prepareWriteSession(const FileToken &file, const size_t &bytes, const size_t &offset, const CkCallback &ready, const char *commitData, const size_t &commitBytes, const size_t &commitOffset, const CkCallback &complete) 79 11
+ENTRY CHARE 455 sessionDone(CkReductionMsg* impl_msg) 79 8
+ENTRY CHARE 456 close(const FileToken &token, const CkCallback &closed) 79 11
+ENTRY CHARE 457 Director(CkMigrateMessage* impl_msg) 79 0
+ENTRY CHARE 458 Director_atomic_0 79 0
+ENTRY CHARE 459 Director_atomic_1 79 0
+ENTRY CHARE 460 Manager(void) 80 0
+ENTRY CHARE 461 run(void) 80 0
+ENTRY CHARE 462 openFile(unsigned int opnum, const FileToken &token, const std::string &name, const Options &opts) 80 11
+ENTRY CHARE 463 close(unsigned int opnum, const FileToken &token, const CkCallback &closed) 80 11
+ENTRY CHARE 464 Manager(CkMigrateMessage* impl_msg) 80 0
+ENTRY CHARE 465 Manager_atomic_0 80 0
+ENTRY CHARE 466 Manager_atomic_1 80 0
+ENTRY CHARE 467 Manager_atomic_2 80 0
+ENTRY CHARE 468 WriteSession(const FileToken &file, const size_t &offset, const size_t &bytes) 81 11
+ENTRY CHARE 469 forwardData(const char *data, const size_t &bytes, const size_t &offset) 81 11
+ENTRY CHARE 470 syncData(void) 81 0
+ENTRY CHARE 471 WriteSession(CkMigrateMessage* impl_msg) 81 0
+ENTRY CHARE 472 Map(void) 82 0
+ENTRY CHARE 473 CkLoop 83 44
+MESSAGE 0 0
+MESSAGE 1 0
+MESSAGE 2 0
+MESSAGE 3 0
+MESSAGE 4 4
+MESSAGE 5 1
+MESSAGE 6 4
+MESSAGE 7 16
+MESSAGE 8 272
+MESSAGE 9 4
+MESSAGE 10 8
+MESSAGE 11 8
+MESSAGE 12 40
+MESSAGE 13 296
+MESSAGE 14 4
+MESSAGE 15 40
+MESSAGE 16 32
+MESSAGE 17 16
+MESSAGE 18 24
+MESSAGE 19 24
+MESSAGE 20 24
+MESSAGE 21 4
+MESSAGE 22 4
+MESSAGE 23 4
+MESSAGE 24 104
+MESSAGE 25 64
+MESSAGE 26 16
+MESSAGE 27 16
+MESSAGE 28 32
+MESSAGE 29 32
+MESSAGE 30 4
+MESSAGE 31 32
+MESSAGE 32 1
+MESSAGE 33 32
+MESSAGE 34 96
+MESSAGE 35 40
+MESSAGE 36 1
+MESSAGE 37 48
+MESSAGE 38 16
+MESSAGE 39 16
+MESSAGE 40 1
+MESSAGE 41 40
+MESSAGE 42 16
+MESSAGE 43 24
+MESSAGE 44 0
+EVENT 0 Evaluating Boudaries
+EVENT 1 Weight Balancer
+EVENT 2 CmiNetworkProgress
+EVENT 3 Node interaction
+EVENT 4 Particle interaction
+EVENT 5 TreeBuild::buildOctTree::recursive
+EVENT 6 TreeBuild::buildOctTree::flushRequests
+EVENT 7 PrefetchDone
+EVENT 139 ckloop total work
+EVENT 143 ckloop finish signal
+TOTAL_FUNCTIONS 0 
+END
