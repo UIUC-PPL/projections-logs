@@ -1,0 +1,488 @@
+MACHINE "ofi-linux-x86_64"
+PROCESSORS 184
+SMPMODE 23 8
+USERNAME "tg872375"
+HOSTNAME "c481-071.stampede2.tacc.utexas.edu"
+COMMANDLINE "/work2/07938/tg872375/stampede2/stampede2/paratreet/examples/Gravity_smry -f /work2/07938/tg872375/stampede2/stampede2/paratreet/inputgen/lambs.00200 +pemap 1-23,25-47 +commap 0,24 -i 3 -u 4 -b 4 +sumDetail +traceroot /work2/07938/tg872375/stampede2/stampede2/paratreet/examples/logs/lambb_smry +logsize 2000000 -n 2944"
+TIMESTAMP 2021-07-21T17:00:22Z
+CHARMVERSION v7.1.0-devel-12-g1fd2ef045
+TOTAL_CHARES 69
+TOTAL_EPS 375
+TOTAL_MSGS 30
+TOTAL_PSEUDOS 0
+TOTAL_EVENTS 0
+CHARE 0 "dummy_thread_chare" -1
+CHARE 1 "dummy_pack_chare" -1
+CHARE 2 "dummy_unpack_chare" -1
+CHARE 3 "SDAG" -1
+CHARE 4 "null" -1
+CHARE 5 "Chare" -1
+CHARE 6 "Group" -1
+CHARE 7 "FutureBOC" -1
+CHARE 8 "FutureMain" -1
+CHARE 9 "CkGroupInitCallback" -1
+CHARE 10 "CkGroupReadyCallback" -1
+CHARE 11 "CkReductionMgr" -1
+CHARE 12 "CkNodeReductionMgr" -1
+CHARE 13 "CkLocCache" -1
+CHARE 14 "CkLocMgr" -1
+CHARE 15 "CkArrayMap" -1
+CHARE 16 "RRMap" -1
+CHARE 17 "DefaultArrayMap" -1
+CHARE 18 "FastArrayMap" -1
+CHARE 19 "HilbertArrayMap" -1
+CHARE 20 "ReadFileMap" -1
+CHARE 21 "Simple1DFileMap" -1
+CHARE 22 "BlockMap" -1
+CHARE 23 "CldMap" -1
+CHARE 24 "ConfigurableRRMap" -1
+CHARE 25 "PropMap" -1
+CHARE 26 "CkMapsInit" -1
+CHARE 27 "CkArray" -1
+CHARE 28 "ArrayElement" -1
+CHARE 29 "CkSyncBarrierInit" -1
+CHARE 30 "CkSyncBarrier" -1
+CHARE 31 "BaseLB" -1
+CHARE 32 "LBMgrInit" -1
+CHARE 33 "LBManager" -1
+CHARE 34 "MetaLBInit" -1
+CHARE 35 "MetaBalancer" -1
+CHARE 36 "MetaBalancerRedn" -1
+CHARE 37 "ckcallback_main" -1
+CHARE 38 "ckcallback_group" -1
+CHARE 39 "waitqd_QDChare" -1
+CHARE 40 "CkCheckpointWriteMgr" -1
+CHARE 41 "CkCheckpointMgr" -1
+CHARE 42 "CkCheckpointInit" -1
+CHARE 43 "CkMulticastMgr" -1
+CHARE 44 "ThreadStateHolder" -1
+CHARE 45 "Writer" -1
+CHARE 46 "TipsyWriter" -1
+CHARE 47 "Reader" -1
+CHARE 48 "TreeSpec" -1
+CHARE 49 "DecompArrayMap" -1
+CHARE 50 "CollocateMap" -1
+CHARE 51 "MainChare" -1
+CHARE 52 "CountManager" -1
+CHARE 53 "NeighborListCollector" -1
+CHARE 54 "CollisionTracker" -1
+CHARE 55 "TreeLB" -1
+CHARE 56 "DistBaseLB" -1
+CHARE 57 "DistributedLB" -1
+CHARE 58 "CentralLB" -1
+CHARE 59 "MetisLB" -1
+CHARE 60 "RecBipartLB" -1
+CHARE 61 "TraceSummaryInit" -1
+CHARE 62 "TraceSummaryBOC" -1
+CHARE 63 "à—u" -1
+CHARE 64 "0aq" -1
+CHARE 65 "ð­u" 1
+CHARE 66 "°¢s" 1
+CHARE 67 "pÈq" -1
+CHARE 68 "" -1
+ENTRY CHARE 0 "dummy_thread_ep" 0 0
+ENTRY CHARE 1 "dummy_pack_ep" 1 1
+ENTRY CHARE 2 "dummy_unpack_ep" 2 2
+ENTRY CHARE 3 "SDAG_RTS" 3 3
+ENTRY CHARE 4 "null" 0 0
+ENTRY CHARE 5 "FutureBOC(FutureInitMsg* impl_msg)" 7 6
+ENTRY CHARE 6 "SetFuture(FutureInitMsg* impl_msg)" 7 6
+ENTRY CHARE 7 "SetSema(FutureInitMsg* impl_msg)" 7 6
+ENTRY CHARE 8 "FutureBOC(CkMigrateMessage* impl_msg)" 7 0
+ENTRY CHARE 9 "FutureMain(CkArgMsg* impl_msg)" 8 0
+ENTRY CHARE 10 "CkGroupInitCallback()" 9 0
+ENTRY CHARE 11 "callMeBack(CkGroupCallbackMsg* impl_msg)" 9 7
+ENTRY CHARE 12 "CkGroupInitCallback(CkMigrateMessage* impl_msg)" 9 0
+ENTRY CHARE 13 "CkGroupReadyCallback()" 10 0
+ENTRY CHARE 14 "callMeBack(CkGroupCallbackMsg* impl_msg)" 10 7
+ENTRY CHARE 15 "CkGroupReadyCallback(CkMigrateMessage* impl_msg)" 10 0
+ENTRY CHARE 16 "CkReductionMgr()" 11 0
+ENTRY CHARE 17 "RecvMsg(CkReductionMsg* impl_msg)" 11 8
+ENTRY CHARE 18 "ReductionStarting(CkReductionNumberMsg* impl_msg)" 11 9
+ENTRY CHARE 19 "LateMigrantMsg(CkReductionMsg* impl_msg)" 11 8
+ENTRY CHARE 20 "MigrantDied(CkReductionNumberMsg* impl_msg)" 11 9
+ENTRY CHARE 21 "Barrier_RecvMsg(CkReductionMsg* impl_msg)" 11 8
+ENTRY CHARE 22 "contributeViaMessage(CkReductionMsg* impl_msg)" 11 8
+ENTRY CHARE 23 "AddToInactiveList(CkReductionInactiveMsg* impl_msg)" 11 10
+ENTRY CHARE 24 "CkReductionMgr(CkMigrateMessage* impl_msg)" 11 0
+ENTRY CHARE 25 "CkNodeReductionMgr()" 12 0
+ENTRY CHARE 26 "RecvMsg(CkReductionMsg* impl_msg)" 12 8
+ENTRY CHARE 27 "CkLocCache()" 13 0
+ENTRY CHARE 28 "requestLocation(const CmiUInt8 &id, int peToTell)" 13 11
+ENTRY CHARE 29 "updateLocation(const CkLocEntry &newEntry)" 13 11
+ENTRY CHARE 30 "CkLocCache(CkMigrateMessage* impl_msg)" 13 0
+ENTRY CHARE 31 "CkLocMgr(const CkArrayOptions &opts)" 14 11
+ENTRY CHARE 32 "immigrate(CkArrayElementMigrateMessage* impl_msg)" 14 12
+ENTRY CHARE 33 "requestLocation(const CkArrayIndex &idx, int peToTell)" 14 11
+ENTRY CHARE 34 "updateLocation(const CkArrayIndex &idx, const CkLocEntry &e)" 14 11
+ENTRY CHARE 35 "requestDemandCreation(const CkArrayIndex &idx, int forPe, int onPe, int cType, const CkArrayID &mgr)" 14 11
+ENTRY CHARE 36 "reclaimRemote(const CkArrayIndex &idx, int deletedOnPe)" 14 11
+ENTRY CHARE 37 "CkLocMgr(CkMigrateMessage* impl_msg)" 14 0
+ENTRY CHARE 38 "RRMap()" 16 0
+ENTRY CHARE 39 "RRMap(CkMigrateMessage* impl_msg)" 16 0
+ENTRY CHARE 40 "DefaultArrayMap()" 17 0
+ENTRY CHARE 41 "DefaultArrayMap(CkMigrateMessage* impl_msg)" 17 0
+ENTRY CHARE 42 "FastArrayMap()" 18 0
+ENTRY CHARE 43 "FastArrayMap(CkMigrateMessage* impl_msg)" 18 0
+ENTRY CHARE 44 "HilbertArrayMap()" 19 0
+ENTRY CHARE 45 "HilbertArrayMap(CkMigrateMessage* impl_msg)" 19 0
+ENTRY CHARE 46 "ReadFileMap()" 20 0
+ENTRY CHARE 47 "ReadFileMap(CkMigrateMessage* impl_msg)" 20 0
+ENTRY CHARE 48 "Simple1DFileMap()" 21 0
+ENTRY CHARE 49 "Simple1DFileMap(CkMigrateMessage* impl_msg)" 21 0
+ENTRY CHARE 50 "BlockMap()" 22 0
+ENTRY CHARE 51 "BlockMap(CkMigrateMessage* impl_msg)" 22 0
+ENTRY CHARE 52 "CldMap()" 23 0
+ENTRY CHARE 53 "CldMap(CkMigrateMessage* impl_msg)" 23 0
+ENTRY CHARE 54 "ConfigurableRRMap()" 24 0
+ENTRY CHARE 55 "ConfigurableRRMap(CkMigrateMessage* impl_msg)" 24 0
+ENTRY CHARE 56 "PropMap()" 25 0
+ENTRY CHARE 57 "PropMap(CkMigrateMessage* impl_msg)" 25 0
+ENTRY CHARE 58 "CkMapsInit(CkArgMsg* impl_msg)" 26 0
+ENTRY CHARE 59 "CkArray(const CkArrayOptions &opts, const CkMarshalledMessage &ctorMsg)" 27 11
+ENTRY CHARE 60 "insertElement(const CkMarshalledMessage &impl_noname_0, const CkArrayIndex &impl_noname_1, const int *listenerData)" 27 11
+ENTRY CHARE 61 "demandCreateElement(const CkArrayIndex &idx, int ctor)" 27 11
+ENTRY CHARE 62 "remoteBeginInserting()" 27 0
+ENTRY CHARE 63 "sendZCBroadcast(const MsgPointerWrapper &p)" 27 11
+ENTRY CHARE 64 "remoteDoneInserting()" 27 0
+ENTRY CHARE 65 "initDone()" 27 0
+ENTRY CHARE 66 "sendBroadcast(CkMessage* impl_msg)" 27 -1
+ENTRY CHARE 67 "recvBroadcast(CkMessage* impl_msg)" 27 -1
+ENTRY CHARE 68 "recvBroadcastViaTree(CkMessage* impl_msg)" 27 -1
+ENTRY CHARE 69 "sendExpeditedBroadcast(CkMessage* impl_msg)" 27 -1
+ENTRY CHARE 70 "recvExpeditedBroadcast(CkMessage* impl_msg)" 27 -1
+ENTRY CHARE 71 "incrementBcastNoAndSendBack(int srcPe, const MsgPointerWrapper &p)" 27 11
+ENTRY CHARE 72 "recvNoKeepBroadcast(CkMessage* impl_msg)" 27 -1
+ENTRY CHARE 73 "sendNoKeepBroadcast(CkMessage* impl_msg)" 27 -1
+ENTRY CHARE 74 "recvNoKeepExpeditedBroadcast(CkMessage* impl_msg)" 27 -1
+ENTRY CHARE 75 "sendNoKeepExpeditedBroadcast(CkMessage* impl_msg)" 27 -1
+ENTRY CHARE 76 "ckDestroy()" 27 0
+ENTRY CHARE 77 "CkArray(CkMigrateMessage* impl_msg)" 27 0
+ENTRY CHARE 78 "ArrayElement()" 28 0
+ENTRY CHARE 79 "ckDestroy()" 28 0
+ENTRY CHARE 80 "recvBroadcast(CkMessage* impl_msg)" 28 -1
+ENTRY CHARE 81 "inmem_checkpoint(CkArrayCheckPTReqMessage* impl_msg)" 28 0
+ENTRY CHARE 82 "defrag(CkReductionMsg* impl_msg)" 28 8
+ENTRY CHARE 83 "ckEmigrate(int toPe)" 28 11
+ENTRY CHARE 84 "ArrayElement(CkMigrateMessage* impl_msg)" 28 0
+ENTRY CHARE 85 "CkSyncBarrierInit(CkArgMsg* impl_msg)" 29 0
+ENTRY CHARE 86 "CkSyncBarrier()" 30 0
+ENTRY CHARE 87 "resumeClients()" 30 0
+ENTRY CHARE 88 "kick(int kickStep, int sourceNode, int sourcePe)" 30 11
+ENTRY CHARE 89 "checkBarrier()" 30 0
+ENTRY CHARE 90 "CkSyncBarrier(CkMigrateMessage* impl_msg)" 30 0
+ENTRY CHARE 91 "BaseLB(const CkLBOptions &impl_noname_0)" 31 11
+ENTRY CHARE 92 "BaseLB(CkMigrateMessage* impl_msg)" 31 0
+ENTRY CHARE 93 "LBMgrInit(CkArgMsg* impl_msg)" 32 0
+ENTRY CHARE 94 "LBManager()" 33 0
+ENTRY CHARE 95 "ResumeClients()" 33 0
+ENTRY CHARE 96 "LBManager(CkMigrateMessage* impl_msg)" 33 0
+ENTRY CHARE 97 "MetaLBInit(CkArgMsg* impl_msg)" 34 0
+ENTRY CHARE 98 "MetaBalancer()" 35 0
+ENTRY CHARE 99 "ReceiveMinStats(const double *load, int n)" 35 11
+ENTRY CHARE 100 "redn_wrapper_ReceiveMinStats(CkReductionMsg *impl_msg)" 35 11
+ENTRY CHARE 101 "LoadBalanceDecision(int req_no, int period)" 35 11
+ENTRY CHARE 102 "LoadBalanceDecisionFinal(int req_no, int period)" 35 11
+ENTRY CHARE 103 "ReceiveIterationNo(int impl_noname_0)" 35 11
+ENTRY CHARE 104 "RegisterNoObjCallback(int impl_noname_1)" 35 11
+ENTRY CHARE 105 "TriggerAdaptiveReduction()" 35 0
+ENTRY CHARE 106 "MetaLBCallLBOnChares()" 35 0
+ENTRY CHARE 107 "MetaLBSetLBOnChares(int switchFrom, int switchTo)" 35 11
+ENTRY CHARE 108 "PreviousAvgLoad(double avg)" 35 11
+ENTRY CHARE 109 "MetaBalancer(CkMigrateMessage* impl_msg)" 35 0
+ENTRY CHARE 110 "MetaBalancerRedn()" 36 0
+ENTRY CHARE 111 "ReceiveIterNo(int max_iter)" 36 11
+ENTRY CHARE 112 "redn_wrapper_ReceiveIterNo(CkReductionMsg *impl_msg)" 36 11
+ENTRY CHARE 113 "getMaxIter(int impl_noname_2)" 36 11
+ENTRY CHARE 114 "MetaBalancerRedn(CkMigrateMessage* impl_msg)" 36 0
+ENTRY CHARE 115 "ckcallback_main(CkArgMsg* impl_msg)" 37 0
+ENTRY CHARE 116 "ckcallback_group()" 38 0
+ENTRY CHARE 117 "registerCcsCallback(const char *name, const CkCallback &cb)" 38 11
+ENTRY CHARE 118 "call(const CkCallback &c, const CkMarshalledMessage &msg)" 38 11
+ENTRY CHARE 119 "call(const CkCallback &c, int length, const char *data)" 38 11
+ENTRY CHARE 120 "ckcallback_group(CkMigrateMessage* impl_msg)" 38 0
+ENTRY CHARE 121 "waitqd_QDChare(CkArgMsg* impl_msg)" 39 0
+ENTRY CHARE 122 "waitQD()" 39 0
+ENTRY CHARE 123 "onQD(CkQdMsg* impl_msg)" 39 5
+ENTRY CHARE 124 "waitqd_QDChare(CkMigrateMessage* impl_msg)" 39 0
+ENTRY CHARE 125 "CkCheckpointWriteMgr()" 40 0
+ENTRY CHARE 126 "Checkpoint(const char *dirname, const CkCallback &cb, const bool &requestStatus, int writersPerNode)" 40 11
+ENTRY CHARE 127 "FinishedCheckpoint()" 40 0
+ENTRY CHARE 128 "CkCheckpointWriteMgr(CkMigrateMessage* impl_msg)" 40 0
+ENTRY CHARE 129 "CkCheckpointMgr()" 41 0
+ENTRY CHARE 130 "Checkpoint(const char *dirname, const CkCallback &cb, const bool &requestStatus)" 41 11
+ENTRY CHARE 131 "SendRestartCB()" 41 0
+ENTRY CHARE 132 "redn_wrapper_SendRestartCB(CkReductionMsg *impl_msg)" 41 8
+ENTRY CHARE 133 "CkCheckpointMgr(CkMigrateMessage* impl_msg)" 41 0
+ENTRY CHARE 134 "CkCheckpointInit(CkArgMsg* impl_msg)" 42 0
+ENTRY CHARE 135 "CkMulticastMgr(int _dfactor, unsigned int _split_size, unsigned int _split_threshold)" 43 11
+ENTRY CHARE 136 "setup(multicastSetupMsg* impl_msg)" 43 27
+ENTRY CHARE 137 "recvCookie(const CkSectionInfo &sid, const CkSectionInfo &child)" 43 11
+ENTRY CHARE 138 "teardown(const CkSectionInfo &sid)" 43 11
+ENTRY CHARE 139 "freeup(const CkSectionInfo &sid)" 43 11
+ENTRY CHARE 140 "retrieveCookie(const CkSectionInfo &s, const CkSectionInfo &srcInfo)" 43 11
+ENTRY CHARE 141 "recvCookieInfo(const CkSectionInfo &s, int red)" 43 11
+ENTRY CHARE 142 "retire(const CkSectionInfo &sid, const CkSectionInfo &root)" 43 11
+ENTRY CHARE 143 "recvMsg(multicastGrpMsg* impl_msg)" 43 28
+ENTRY CHARE 144 "sendToLocal(multicastGrpMsg* impl_msg)" 43 28
+ENTRY CHARE 145 "recvPacket(const CkSectionInfo &_cookie, int offset, int n, const char *data, int seqno, int count, int totalsize, int frombufer)" 43 11
+ENTRY CHARE 146 "recvRedMsg(CkReductionMsg* impl_msg)" 43 8
+ENTRY CHARE 147 "updateRedNo(const mCastEntryPtr &e, int no)" 43 11
+ENTRY CHARE 148 "CkMulticastMgr(CkMigrateMessage* impl_msg)" 43 0
+ENTRY CHARE 149 "ThreadStateHolder()" 44 0
+ENTRY CHARE 150 "setUniverse(const BoundingBox &b)" 44 11
+ENTRY CHARE 151 "collectAndResetStats(const CkCallback &cb)" 44 11
+ENTRY CHARE 152 "collectMetaData(const CkCallback &cb)" 44 11
+ENTRY CHARE 153 "Writer(const std::string &of, int n_particles)" 45 11
+ENTRY CHARE 154 "receive(const std::vector<Particle> &particles, const Real &time, int iter)" 45 11
+ENTRY CHARE 155 "write(const CkCallback &cb)" 45 11
+ENTRY CHARE 156 "TipsyWriter(const std::string &of, const BoundingBox &box)" 46 11
+ENTRY CHARE 157 "receive(const std::vector<Particle> &particles, const Real &time, int iter)" 46 11
+ENTRY CHARE 158 "write(int prefix_count, const CkCallback &cb)" 46 11
+ENTRY CHARE 159 "Reader()" 47 0
+ENTRY CHARE 160 "load(const std::string &impl_noname_49, const CkCallback &impl_noname_4a)" 47 11
+ENTRY CHARE 161 "computeUniverseBoundingBox(const CkCallback &impl_noname_4b)" 47 11
+ENTRY CHARE 162 "assignKeys(const BoundingBox &impl_noname_4c, const CkCallback &impl_noname_4d)" 47 11
+ENTRY CHARE 163 "countAssignments(const std::vector<GenericSplitter> &impl_noname_51, const bool &impl_noname_52, const CkCallback &impl_noname_53, const bool &impl_noname_54)" 47 11
+ENTRY CHARE 164 "doSplit(const std::vector<GenericSplitter> &impl_noname_55, const bool &impl_noname_56, const CkCallback &impl_noname_57)" 47 11
+ENTRY CHARE 165 "getAllSfcKeys(const CkCallback &impl_noname_58)" 47 11
+ENTRY CHARE 166 "getAllPositions(const CkCallback &impl_noname_59)" 47 11
+ENTRY CHARE 167 "pickSamples(int impl_noname_5a, const CkCallback &impl_noname_5b)" 47 11
+ENTRY CHARE 168 "prepMessages(const std::vector<Key> &impl_noname_5c, const CkCallback &impl_noname_5d)" 47 11
+ENTRY CHARE 169 "redistribute()" 47 0
+ENTRY CHARE 170 "receive(ParticleMsg* impl_msg)" 47 29
+ENTRY CHARE 171 "localSort(const CkCallback &impl_noname_5e)" 47 11
+ENTRY CHARE 172 "checkSort(Key impl_noname_5f, const CkCallback &impl_noname_60)" 47 11
+ENTRY CHARE 173 "TreeSpec(const paratreet::Configuration &impl_noname_65)" 48 11
+ENTRY CHARE 174 "check(const CkCallback &impl_noname_66)" 48 11
+ENTRY CHARE 175 "reset()" 48 0
+ENTRY CHARE 176 "receiveDecomposition(const CkCallback &impl_noname_67, const CkPointer<Decomposition> &impl_noname_68, const bool &impl_noname_69)" 48 11
+ENTRY CHARE 177 "getSubtreeDecomposition()" 48 0
+ENTRY CHARE 178 "getPartitionDecomposition()" 48 0
+ENTRY CHARE 179 "receiveConfiguration(const paratreet::Configuration &impl_noname_6a, const CkCallback &impl_noname_6b)" 48 11
+ENTRY CHARE 180 "getConfiguration()" 48 0
+ENTRY CHARE 181 "setConfiguration(const paratreet::Configuration &impl_noname_6c)" 48 11
+ENTRY CHARE 182 "DecompArrayMap(const CkPointer<Decomposition> &impl_noname_6d, int impl_noname_6e, int impl_noname_6f)" 49 11
+ENTRY CHARE 183 "CollocateMap(const CkPointer<Decomposition> &impl_noname_70, const std::vector<int> &impl_noname_71)" 50 11
+ENTRY CHARE 184 "MainChare(CkArgMsg* impl_msg)" 51 0
+ENTRY CHARE 185 "run()" 51 0
+ENTRY CHARE 186 "CountManager(double min, double max, int nbins)" 52 11
+ENTRY CHARE 187 "sum(const CkCallback &impl_noname_0)" 52 11
+ENTRY CHARE 188 "NeighborListCollector()" 53 0
+ENTRY CHARE 189 "addRequest(int impl_noname_1, const Key &impl_noname_2)" 53 11
+ENTRY CHARE 190 "forwardRequest(int impl_noname_3, const Particle &impl_noname_4)" 53 11
+ENTRY CHARE 191 "fillRequest(int impl_noname_5, const Particle &impl_noname_6)" 53 11
+ENTRY CHARE 192 "savePartitionHome(int impl_noname_7, const Particle &impl_noname_8)" 53 11
+ENTRY CHARE 193 "shareAccelerations()" 53 0
+ENTRY CHARE 194 "addAcceleration(const Particle &impl_noname_9)" 53 11
+ENTRY CHARE 195 "forwardAcceleration(const Particle &impl_noname_a)" 53 11
+ENTRY CHARE 196 "reset(const CkCallback &impl_noname_b)" 53 11
+ENTRY CHARE 197 "CollisionTracker()" 54 0
+ENTRY CHARE 198 "setShouldDelete(const Key &key)" 54 11
+ENTRY CHARE 199 "reset(const CkCallback &impl_noname_c)" 54 11
+ENTRY CHARE 200 "startDown<GravityVisitor<0, 0, 0>>()" 0 0
+ENTRY CHARE 201 "startDown<GravityVisitor<-1, -1, -1>>()" 0 0
+ENTRY CHARE 202 "startDown<GravityVisitor<-1, -1, 0>>()" 0 0
+ENTRY CHARE 203 "startDown<GravityVisitor<-1, -1, 1>>()" 0 0
+ENTRY CHARE 204 "startDown<GravityVisitor<-1, 0, -1>>()" 0 0
+ENTRY CHARE 205 "startDown<GravityVisitor<-1, 0, 0>>()" 0 0
+ENTRY CHARE 206 "startDown<GravityVisitor<-1, 0, 1>>()" 0 0
+ENTRY CHARE 207 "startDown<GravityVisitor<-1, 1, -1>>()" 0 0
+ENTRY CHARE 208 "startDown<GravityVisitor<-1, 1, 0>>()" 0 0
+ENTRY CHARE 209 "startDown<GravityVisitor<-1, 1, 1>>()" 0 0
+ENTRY CHARE 210 "startDown<GravityVisitor<0, -1, -1>>()" 0 0
+ENTRY CHARE 211 "startDown<GravityVisitor<0, -1, 0>>()" 0 0
+ENTRY CHARE 212 "startDown<GravityVisitor<0, -1, 1>>()" 0 0
+ENTRY CHARE 213 "startDown<GravityVisitor<0, 0, -1>>()" 0 0
+ENTRY CHARE 214 "startDown<GravityVisitor<0, 0, 1>>()" 0 0
+ENTRY CHARE 215 "startDown<GravityVisitor<0, 1, -1>>()" 0 0
+ENTRY CHARE 216 "startDown<GravityVisitor<0, 1, 0>>()" 0 0
+ENTRY CHARE 217 "startDown<GravityVisitor<0, 1, 1>>()" 0 0
+ENTRY CHARE 218 "startDown<GravityVisitor<1, -1, -1>>()" 0 0
+ENTRY CHARE 219 "startDown<GravityVisitor<1, -1, 0>>()" 0 0
+ENTRY CHARE 220 "startDown<GravityVisitor<1, -1, 1>>()" 0 0
+ENTRY CHARE 221 "startDown<GravityVisitor<1, 0, -1>>()" 0 0
+ENTRY CHARE 222 "startDown<GravityVisitor<1, 0, 0>>()" 0 0
+ENTRY CHARE 223 "startDown<GravityVisitor<1, 0, 1>>()" 0 0
+ENTRY CHARE 224 "startDown<GravityVisitor<1, 1, -1>>()" 0 0
+ENTRY CHARE 225 "startDown<GravityVisitor<1, 1, 0>>()" 0 0
+ENTRY CHARE 226 "startDown<GravityVisitor<1, 1, 1>>()" 0 0
+ENTRY CHARE 227 "startDual<GravityVisitor<0, 0, 0>>()" 0 0
+ENTRY CHARE 228 "startDown<CollisionVisitor>()" 0 0
+ENTRY CHARE 229 "startUpAndDown<DensityVisitor>()" 0 0
+ENTRY CHARE 230 "startPrefetch<GravityVisitor<0, 0, 0>>(const DPHolder<Data> &impl_noname_7, const CkCallback &impl_noname_8)" 0 11
+ENTRY CHARE 231 "prefetch<GravityVisitor<0, 0, 0>>(const Data &impl_noname_44, int impl_noname_45, const CkCallback &impl_noname_46)" 0 11
+ENTRY CHARE 232 "TreeLB(const CkLBOptions &impl_noname_0)" 55 11
+ENTRY CHARE 233 "ProcessAtSync()" 55 0
+ENTRY CHARE 234 "redn_wrapper_ProcessAtSync(CkReductionMsg *impl_msg)" 55 8
+ENTRY CHARE 235 "sendStatsUp(CkMessage* impl_msg)" 55 -1
+ENTRY CHARE 236 "sendDecisionDown(CkMessage* impl_msg)" 55 -1
+ENTRY CHARE 237 "recvLoadTokens(CkMessage* impl_msg)" 55 -1
+ENTRY CHARE 238 "multicastIDM(const IDM &mig_order, int num_pes, const int *_pes)" 55 11
+ENTRY CHARE 239 "resumeClients()" 55 0
+ENTRY CHARE 240 "redn_wrapper_resumeClients(CkReductionMsg *impl_msg)" 55 8
+ENTRY CHARE 241 "reportLbTime(const double *times, int n)" 55 11
+ENTRY CHARE 242 "redn_wrapper_reportLbTime(CkReductionMsg *impl_msg)" 55 11
+ENTRY CHARE 243 "TreeLB(CkMigrateMessage* impl_msg)" 55 0
+ENTRY CHARE 244 "DistBaseLB(const CkLBOptions &impl_noname_0)" 56 11
+ENTRY CHARE 245 "LoadBalance()" 56 0
+ENTRY CHARE 246 "barrierDone()" 56 0
+ENTRY CHARE 247 "redn_wrapper_barrierDone(CkReductionMsg *impl_msg)" 56 8
+ENTRY CHARE 248 "ResumeClients()" 56 0
+ENTRY CHARE 249 "redn_wrapper_ResumeClients(CkReductionMsg *impl_msg)" 56 8
+ENTRY CHARE 250 "ResumeClients(int balancing)" 56 11
+ENTRY CHARE 251 "DistBaseLB(CkMigrateMessage* impl_msg)" 56 0
+ENTRY CHARE 252 "DistributedLB(const CkLBOptions &impl_noname_0)" 57 11
+ENTRY CHARE 253 "GossipLoadInfo(int pe, int n, const int *pe_no, const double *load)" 57 11
+ENTRY CHARE 254 "LoadReduction(CkReductionMsg* impl_msg)" 57 8
+ENTRY CHARE 255 "AfterLBReduction(CkReductionMsg* impl_msg)" 57 8
+ENTRY CHARE 256 "DoneGossip()" 57 0
+ENTRY CHARE 257 "InformMigration(int obj_id, int from_pe, double obj_load, const bool &force)" 57 11
+ENTRY CHARE 258 "RecvAck(int obj_id, int assigned_pe, const bool &can_accept)" 57 11
+ENTRY CHARE 259 "DistributedLB(CkMigrateMessage* impl_msg)" 57 0
+ENTRY CHARE 260 "CentralLB(const CkLBOptions &impl_noname_0)" 58 11
+ENTRY CHARE 261 "ProcessAtSync()" 58 0
+ENTRY CHARE 262 "SendStats()" 58 0
+ENTRY CHARE 263 "redn_wrapper_SendStats(CkReductionMsg *impl_msg)" 58 8
+ENTRY CHARE 264 "ReceiveStats(const CkMarshalledCLBStatsMessage &data)" 58 11
+ENTRY CHARE 265 "ReceiveStatsViaTree(const CkMarshalledCLBStatsMessage &data)" 58 11
+ENTRY CHARE 266 "ReceiveStatsFromRoot(const CkMarshalledCLBStatsMessage &data)" 58 11
+ENTRY CHARE 267 "ReceiveCounts(const int *counts, int n)" 58 11
+ENTRY CHARE 268 "redn_wrapper_ReceiveCounts(CkReductionMsg *impl_msg)" 58 11
+ENTRY CHARE 269 "LoadBalance()" 58 0
+ENTRY CHARE 270 "t_LoadBalance()" 58 0
+ENTRY CHARE 271 "ApplyDecision()" 58 0
+ENTRY CHARE 272 "ResumeClients(int impl_noname_1)" 58 11
+ENTRY CHARE 273 "ResumeClients()" 58 0
+ENTRY CHARE 274 "redn_wrapper_ResumeClients(CkReductionMsg *impl_msg)" 58 8
+ENTRY CHARE 275 "changeFreq(int impl_noname_2)" 58 11
+ENTRY CHARE 276 "ScatterMigrationResults(LBScatterMsg* impl_msg)" 58 16
+ENTRY CHARE 277 "ReceiveMigration(LBMigrateMsg* impl_msg)" 58 15
+ENTRY CHARE 278 "ReceiveMigration(LBScatterMsg* impl_msg)" 58 16
+ENTRY CHARE 279 "ProcessReceiveMigration()" 58 0
+ENTRY CHARE 280 "redn_wrapper_ProcessReceiveMigration(CkReductionMsg *impl_msg)" 58 8
+ENTRY CHARE 281 "ProcessMigrationDecision()" 58 0
+ENTRY CHARE 282 "redn_wrapper_ProcessMigrationDecision(CkReductionMsg *impl_msg)" 58 8
+ENTRY CHARE 283 "MissMigrate(int impl_noname_3)" 58 11
+ENTRY CHARE 284 "CheckForRealloc()" 58 0
+ENTRY CHARE 285 "ResumeFromReallocCheckpoint()" 58 0
+ENTRY CHARE 286 "MigrationDoneImpl(int impl_noname_4)" 58 11
+ENTRY CHARE 287 "WillIbekilled(const std::vector<char> &avail, int impl_noname_5)" 58 11
+ENTRY CHARE 288 "StartCleanup()" 58 0
+ENTRY CHARE 289 "CentralLB(CkMigrateMessage* impl_msg)" 58 0
+ENTRY CHARE 290 "MetisLB(const CkLBOptions &impl_noname_0)" 59 11
+ENTRY CHARE 291 "MetisLB(CkMigrateMessage* impl_msg)" 59 0
+ENTRY CHARE 292 "RecBipartLB(const CkLBOptions &impl_noname_0)" 60 11
+ENTRY CHARE 293 "RecBipartLB(CkMigrateMessage* impl_msg)" 60 0
+ENTRY CHARE 294 "TraceSummaryInit(CkArgMsg* impl_msg)" 61 0
+ENTRY CHARE 295 "TraceSummaryBOC()" 62 0
+ENTRY CHARE 296 "startSumOnly()" 62 0
+ENTRY CHARE 297 "askSummary(int size)" 62 11
+ENTRY CHARE 298 "sendSummaryBOC(const double *results, int n)" 62 11
+ENTRY CHARE 299 "redn_wrapper_sendSummaryBOC(CkReductionMsg *impl_msg)" 62 11
+ENTRY CHARE 300 "initCCS()" 62 0
+ENTRY CHARE 301 "ccsRequestSummaryDouble(CkCcsRequestMsg* impl_msg)" 62 23
+ENTRY CHARE 302 "ccsRequestSummaryUnsignedChar(CkCcsRequestMsg* impl_msg)" 62 23
+ENTRY CHARE 303 "collectSummaryData(double startTime, double binSize, int numBins)" 62 11
+ENTRY CHARE 304 "summaryDataCollected(const double *result, int n)" 62 11
+ENTRY CHARE 305 "redn_wrapper_summaryDataCollected(CkReductionMsg *impl_msg)" 62 11
+ENTRY CHARE 306 "traceSummaryParallelShutdown(int pe)" 62 11
+ENTRY CHARE 307 "maxBinSize(double impl_noname_0)" 62 11
+ENTRY CHARE 308 "redn_wrapper_maxBinSize(CkReductionMsg *impl_msg)" 62 11
+ENTRY CHARE 309 "shrink(double _maxBinSize)" 62 11
+ENTRY CHARE 310 "sumData(const double *result, int n)" 62 11
+ENTRY CHARE 311 "redn_wrapper_sumData(CkReductionMsg *impl_msg)" 62 11
+ENTRY CHARE 312 "TraceSummaryBOC(CkMigrateMessage* impl_msg)" 62 0
+ENTRY CHARE 313 "CacheManager()" 63 0
+ENTRY CHARE 314 "initialize(const CkCallback &impl_noname_0)" 63 11
+ENTRY CHARE 315 "requestNodes(const std::pair<Key,int> &impl_noname_1)" 63 11
+ENTRY CHARE 316 "recvStarterPack(const std::pair<Key,SpatialNode<Data>> *pack, int n, const CkCallback &impl_noname_2)" 63 11
+ENTRY CHARE 317 "addCache(const MultiData<Data> &impl_noname_3)" 63 11
+ENTRY CHARE 318 "restoreData(const std::pair<Key,SpatialNode<Data>> &impl_noname_4)" 63 11
+ENTRY CHARE 319 "receiveSubtree(const MultiData<Data> &impl_noname_5, const PPHolder<Data> &impl_noname_6)" 63 11
+ENTRY CHARE 320 "startParentPrefetch(const DPHolder<Data> &impl_noname_9, const CkCallback &impl_noname_a)" 63 11
+ENTRY CHARE 321 "destroy(const bool &impl_noname_b)" 63 11
+ENTRY CHARE 322 "resetCachedParticles(const CkCallback &impl_noname_c)" 63 11
+ENTRY CHARE 323 "Resumer()" 64 0
+ENTRY CHARE 324 "process(const Key &impl_noname_d)" 64 11
+ENTRY CHARE 325 "reset()" 64 0
+ENTRY CHARE 326 "Partition(int impl_noname_e, const CProxy_CacheManager<Data> &impl_noname_f, const CProxy_Resumer<Data> &impl_noname_10, const TCHolder<Data> &impl_noname_11, const CProxy_Driver<Data> &impl_noname_12, const bool &impl_noname_13)" 65 11
+ENTRY CHARE 327 "interact(const CkCallback &impl_noname_14)" 65 11
+ENTRY CHARE 328 "goDown()" 65 0
+ENTRY CHARE 329 "receiveLeaves(const std::vector<Key> &impl_noname_15, const Key &impl_noname_16, int impl_noname_17, const TPHolder<Data> &impl_noname_18)" 65 11
+ENTRY CHARE 330 "makeLeaves(int impl_noname_19)" 65 11
+ENTRY CHARE 331 "destroy()" 65 0
+ENTRY CHARE 332 "reset()" 65 0
+ENTRY CHARE 333 "kick(const Real &impl_noname_1a, const CkCallback &cb)" 65 11
+ENTRY CHARE 334 "perturb(const Real &impl_noname_1b, const CkCallback &cb)" 65 11
+ENTRY CHARE 335 "rebuild(const BoundingBox &impl_noname_1c, const TPHolder<Data> &impl_noname_1d, const bool &impl_noname_1e)" 65 11
+ENTRY CHARE 336 "output(const CProxy_Writer &impl_noname_1f, int impl_noname_20, const CkCallback &impl_noname_21)" 65 11
+ENTRY CHARE 337 "output(const CProxy_TipsyWriter &impl_noname_22, int impl_noname_23, const CkCallback &impl_noname_24)" 65 11
+ENTRY CHARE 338 "callPerLeafFn(int indicator, const CkCallback &cb)" 65 11
+ENTRY CHARE 339 "deleteParticleOfOrder(int order)" 65 11
+ENTRY CHARE 340 "pauseForLB()" 65 0
+ENTRY CHARE 341 "Partition(CkMigrateMessage* impl_msg)" 65 0
+ENTRY CHARE 342 "Subtree(const CkCallback &impl_noname_25, int impl_noname_26, int impl_noname_27, int impl_noname_28, const TCHolder<Data> &impl_noname_29, const CProxy_Resumer<Data> &impl_noname_2a, const CProxy_CacheManager<Data> &impl_noname_2b, const DPHolder<Data> &impl_noname_2c, const bool &impl_noname_2d)" 66 11
+ENTRY CHARE 343 "receive(ParticleMsg* impl_msg)" 66 29
+ENTRY CHARE 344 "buildTree(const CProxy_Partition<Data> &impl_noname_2e, const CkCallback &impl_noname_2f)" 66 11
+ENTRY CHARE 345 "requestNodes(const Key &impl_noname_30, int impl_noname_31)" 66 11
+ENTRY CHARE 346 "requestCopy(int impl_noname_32, const PPHolder<Data> &impl_noname_33)" 66 11
+ENTRY CHARE 347 "destroy()" 66 0
+ENTRY CHARE 348 "reset()" 66 0
+ENTRY CHARE 349 "sendLeaves(const CProxy_Partition<Data> &impl_noname_34)" 66 11
+ENTRY CHARE 350 "goDown()" 66 0
+ENTRY CHARE 351 "checkParticlesChanged(const CkCallback &impl_noname_35)" 66 11
+ENTRY CHARE 352 "collectMetaData(const CkCallback &cb)" 66 11
+ENTRY CHARE 353 "pauseForLB()" 66 0
+ENTRY CHARE 354 "Subtree(CkMigrateMessage* impl_msg)" 66 0
+ENTRY CHARE 355 "TreeCanopy()" 67 0
+ENTRY CHARE 356 "reset()" 67 0
+ENTRY CHARE 357 "recvProxies(const TPHolder<Data> &impl_noname_36, int impl_noname_37, const CProxy_CacheManager<Data> &impl_noname_38, const DPHolder<Data> &impl_noname_39)" 67 11
+ENTRY CHARE 358 "recvData(const SpatialNode<Data> &impl_noname_3a, int impl_noname_3b)" 67 11
+ENTRY CHARE 359 "requestData(int impl_noname_3c)" 67 11
+ENTRY CHARE 360 "TreeCanopy(CkMigrateMessage* impl_msg)" 67 0
+ENTRY CHARE 361 "Driver(const CProxy_CacheManager<Data> &impl_noname_3d, const CProxy_Resumer<Data> &impl_noname_3e, const CProxy_TreeCanopy<Data> &impl_noname_3f)" 68 11
+ENTRY CHARE 362 "init(const CkCallback &cb)" 68 11
+ENTRY CHARE 363 "run(const CkCallback &cb)" 68 11
+ENTRY CHARE 364 "countInts(const unsigned long long *intrn_counts)" 68 11
+ENTRY CHARE 365 "redn_wrapper_countInts(CkReductionMsg *impl_msg)" 68 11
+ENTRY CHARE 366 "reportTime()" 68 0
+ENTRY CHARE 367 "redn_wrapper_reportTime(CkReductionMsg *impl_msg)" 68 8
+ENTRY CHARE 368 "recvTC(const std::pair<Key,SpatialNode<Data>> &impl_noname_40)" 68 11
+ENTRY CHARE 369 "loadCache(const CkCallback &impl_noname_41)" 68 11
+ENTRY CHARE 370 "partitionLocation(int impl_noname_42, int impl_noname_43)" 68 11
+ENTRY CHARE 371 "request(const Key *request_list, int list_size, int impl_noname_47, const CkCallback &impl_noname_48)" 68 11
+ENTRY CHARE 372 "request<CentroidData>(const CProxy_Subtree<Data> &impl_noname_4e, int impl_noname_4f, int impl_noname_50)" 47 11
+ENTRY CHARE 373 "flush<CentroidData>(int impl_noname_61, const CProxy_Subtree<Data> &impl_noname_62)" 47 11
+ENTRY CHARE 374 "assignPartitions<CentroidData>(int impl_noname_63, const CProxy_Partition<Data> &impl_noname_64)" 47 11
+MESSAGE 0 0
+MESSAGE 1 0
+MESSAGE 2 0
+MESSAGE 3 0
+MESSAGE 4 4
+MESSAGE 5 1
+MESSAGE 6 4
+MESSAGE 7 16
+MESSAGE 8 136
+MESSAGE 9 4
+MESSAGE 10 8
+MESSAGE 11 8
+MESSAGE 12 48
+MESSAGE 13 336
+MESSAGE 14 4
+MESSAGE 15 40
+MESSAGE 16 32
+MESSAGE 17 16
+MESSAGE 18 64
+MESSAGE 19 32
+MESSAGE 20 12
+MESSAGE 21 32
+MESSAGE 22 40
+MESSAGE 23 24
+MESSAGE 24 24
+MESSAGE 25 4
+MESSAGE 26 24
+MESSAGE 27 80
+MESSAGE 28 32
+MESSAGE 29 16
+END
